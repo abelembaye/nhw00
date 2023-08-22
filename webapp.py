@@ -57,7 +57,7 @@ if check_password():
     # Handle multiple image uploads
     image_base64_list = []
     for i in range(1):  # Change '2' to the number of images you want the user to upload
-        uploaded_file = form.file_uploader(f"Q{i + 1}.1 Upload Graph {i + 1}" , type=["png" , "jpg" , "jpeg"] ,
+        uploaded_file = form.file_uploader(f"Upload Graph \# {i + 1}" , type=["png" , "jpg" , "jpeg"] ,
                                            key=f"q{i + 1}")
         if uploaded_file is not None:
             # Read the image
