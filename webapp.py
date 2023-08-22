@@ -40,7 +40,7 @@ def check_password():
         return True
 
 if check_password():
-    st.write("Here goes your normal Streamlit app...")
+#   st.write("Here goes your normal Streamlit app...")
 #    st.button("Click me")
 # Load HTML template
     env = Environment(loader=FileSystemLoader(".") , autoescape=select_autoescape())
@@ -53,7 +53,7 @@ if check_password():
     student_name = form.text_input("Full NAME" , placeholder="John Doe")
     # q01 = form.text_area(label="questions 1 answered here:", height=200, max_chars=500, placeholder="No place like Economics!")
     q01 = form.text_input("What is your major/minor" , placeholder="one line answer", key=1)
-    q02 = form.text_area("write one paragraph about the current situation of the economy" , height=200, max_chars=200, placeholder="many line answer", key=2)
+    q02 = form.text_area("write one paragraph about the current situation of the economy" , height=200, max_chars=200, placeholder="many lines answer", key=2)
     # Handle multiple image uploads
     image_base64_list = []
     for i in range(1):  # Change '2' to the number of images you want the user to upload
@@ -92,7 +92,7 @@ if check_password():
         st.download_button(
             "⬇️ Download pdf" ,
             data=pdf ,
-            file_name="AssignX.pdf" ,
+            file_name="nhw00of_Mr_X.pdf" ,
             mime="application/octet-stream" ,
         )
 
