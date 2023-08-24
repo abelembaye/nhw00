@@ -57,7 +57,7 @@ if check_password():
     # Handle multiple image uploads
     image_base64_list = []
     for i in range(1):  # Change '2' to the number of images you want the user to upload
-        uploaded_file = form.file_uploader(f"Upload Graph \# {i + 1} i.e. a graph made using the 'grapher' app linked in Bb, saved as image .PNG, .JPG or JPEG type ", type=["png" , "jpg" , "jpeg"] ,
+        uploaded_file = form.file_uploader(f"Upload Graph \# {i + 1} i.e. a graph showing supply and demand (or any two line segments) made using the 'grapher' app linked in Bb, saved as image .PNG, .JPG or JPEG type ", type=["png" , "jpg" , "jpeg"] ,
                                            key=f"q{i + 1}")
         if uploaded_file is not None:
             # Read the image
