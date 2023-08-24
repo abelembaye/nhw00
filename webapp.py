@@ -9,8 +9,8 @@ from PIL import Image
 import base64
 from io import BytesIO
 
-st.set_page_config(layout="centered" , page_icon="" , page_title=" HW00")
-st.title("Econ 2013 HW00-- How to submit pdf file with grapher drawing and streamlit pdf generation")
+st.set_page_config(layout="centered" , page_icon="" , page_title=" NHW01")
+st.title("Econ 2013 NHW01-- How to submit pdf file with grapher drawing and streamlit pdf generation")
 def check_password():
     """Returns `True` if the user had the correct password."""
 
