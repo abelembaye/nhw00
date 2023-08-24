@@ -47,17 +47,17 @@ if check_password():
 
     # here the template is directly in the main .py file which is not ideal
     template = env.get_template("template2.html")
-    st.write("Answer the following questions based on the assignment post on Blackboard:")
+    st.write("Please complete the following. The aim of this assignment is to master how to use streamlit app so you won't be graded for accuracy but completion.")
     form = st.form("template_form")
 
     student_name = form.text_input("Full NAME" , placeholder="John Doe")
     # q01 = form.text_area(label="questions 1 answered here:", height=200, max_chars=500, placeholder="No place like Economics!")
     q01 = form.text_input("What is your major/minor" , placeholder="one line answer", key=1)
-    q02 = form.text_area("write one paragraph about the current situation of the economy" , height=200, max_chars=200, placeholder="many lines answer", key=2)
+    q02 = form.text_area("write one paragraph about the current situation of the economy; the description of the U.S. macroeconomy or the problem its encountering" , height=200, max_chars=200, placeholder="many lines answer", key=2)
     # Handle multiple image uploads
     image_base64_list = []
     for i in range(1):  # Change '2' to the number of images you want the user to upload
-        uploaded_file = form.file_uploader(f"Upload Graph \# {i + 1}" , type=["png" , "jpg" , "jpeg"] ,
+        uploaded_file = form.file_uploader(f"Upload Graph \# {i + 1} i.e. a graph made using the "grapher" app linked in Bb, saved as image .PNG, .JPG or JPEG type ", type=["png" , "jpg" , "jpeg"] ,
                                            key=f"q{i + 1}")
         if uploaded_file is not None:
             # Read the image
