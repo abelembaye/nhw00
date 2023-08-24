@@ -10,7 +10,7 @@ import base64
 from io import BytesIO
 
 st.set_page_config(layout="centered" , page_icon="" , page_title=" NHW01")
-st.title("Econ 2013 NHW01-- How to submit pdf file with grapher drawing and streamlit pdf generation")
+st.title("Econ 2013 NHW01 pdf report geneation-- How to generate a pdf file with grapher drawing uploaded and then submit to gradescope")
 def check_password():
     """Returns `True` if the user had the correct password."""
 
@@ -47,7 +47,7 @@ if check_password():
 
     # here the template is directly in the main .py file which is not ideal
     template = env.get_template("template2.html")
-    st.write("Please complete the following. The aim of this assignment is to master how to use streamlit app so you won't be graded for accuracy but completion.")
+    st.write("Please complete the following. The aim of this assignment is to master how to use streamlit app to generate a pdf file of your answers that will be submitted to gradescope. So you won't be graded for accuracy but completion.")
     form = st.form("template_form")
 
     student_name = form.text_input("Full NAME" , placeholder="John Doe")
